@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk17
+  - org.freedesktop.Sdk.Extension.openjdk21
 command: stm32cubemx
 finish-args:
   - --socket=x11
@@ -16,7 +16,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk17/install.sh
+      - /usr/lib/sdk/openjdk21/install.sh
 
   - name: stm32cubemx
     buildsystem: simple
@@ -31,8 +31,8 @@ modules:
       - install -Dm644 com.st.STM32CubeMX.metainfo.xml /app/share/appdata/com.st.STM32CubeMX.metainfo.xml
     sources:
       - type: archive
-        url: https://sw-center.st.com/packs/resource/library/stm32cube_mx_v6121-lin.zip
-        sha256: e1b914f43795cf60a4ec6e38513478cd18208b08a11c16eeaea4b9a478fe60ae
+        url: https://sw-center.st.com/packs/resource/library/stm32cube_mx_v6130-lin.zip
+        sha256: d0dfa25f52b741fbda60844533f09226fe36a3b3696c360849f5a2e11fbeee99
         strip-components: 0
       - type: file
         path: com.st.STM32CubeMX.metainfo.xml
