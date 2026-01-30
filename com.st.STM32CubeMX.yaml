@@ -24,16 +24,17 @@ modules:
       no-debuginfo: true
       no-debuginfo-compression: true
     build-commands:
+      - unzip -q stm32cube_mx.zip
       - mv MX /app/stm32cubemx
       - install -Dm755 stm32cubemx /app/bin/stm32cubemx
       - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/com.st.STM32CubeMX.png
       - install -Dm644 com.st.STM32CubeMX.desktop /app/share/applications/com.st.STM32CubeMX.desktop
       - install -Dm644 com.st.STM32CubeMX.metainfo.xml /app/share/appdata/com.st.STM32CubeMX.metainfo.xml
     sources:
-      - type: archive
+      - type: file 
         url:  https://sw-center.st.com/packs/resource/library/stm32cube_mx_v6161-lin.zip
         sha256: 91f754c6149c967460117f25f566d1f0beb126093c476e7d51f2da8060e962f7
-        strip-components: 0
+        dest-filename: stm32cube_mx.zip
       - type: file
         path: com.st.STM32CubeMX.metainfo.xml
       - type: file
