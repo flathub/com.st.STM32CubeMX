@@ -32,8 +32,8 @@ modules:
       - install -Dm644 com.st.STM32CubeMX.metainfo.xml /app/share/appdata/com.st.STM32CubeMX.metainfo.xml
     sources:
       - type: file 
-        url:  https://sw-center.st.com/packs/resource/library/stm32cube_mx_v6180-lin.zip
-        sha256: 99e280c5969d2c275b76ffc826028a97bdebced463eee8d5ffe46f27196e0cc5
+        url: https://sw-center.st.com/packs/resource/library/stm32cube_mx_v6181-lin.zip 
+        sha256: 08c4cef5487cd7d36c1f1e6e0267396a4e2e17f6aace401229ed7ed0baf7841f
         dest-filename: stm32cube_mx.zip
       - type: file
         path: com.st.STM32CubeMX.metainfo.xml
